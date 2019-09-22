@@ -1,0 +1,1 @@
+web: gunicorn bookworm_backend.wsgi
