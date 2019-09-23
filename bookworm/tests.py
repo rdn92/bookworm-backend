@@ -1,5 +1,4 @@
 import pytest
-import allure
 from django.urls import reverse
 from rest_framework import status
 from .models import Author
@@ -22,3 +21,9 @@ def test_create_author(client):
     assert Author.objects.count() == 1
     assert Author.objects.get().first_name == 'name'
     assert Author.objects.get().last_name == 'surname'
+
+@pytest.mark.django_db
+def test_get_author(client):
+    url = reverse('author', args=[1])
+    response = client.get(url)
+    assert response.status_code == status.HTTP_404_NOT_FOUND
