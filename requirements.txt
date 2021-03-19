@@ -8,7 +8,7 @@ Django==2.2.5
 django-cors-headers==3.1.1
 django-heroku==0.3.1
 django-rest-framework==0.1.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 gunicorn==19.9.0
 importlib-metadata==0.23
 more-itertools==7.2.0
